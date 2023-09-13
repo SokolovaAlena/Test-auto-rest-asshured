@@ -8,14 +8,18 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 
+import static HomeWork1.Configs.URI;
+import static HomeWork1.Configs.USER_NAME;
+
 public class CreattingUser {
-    private static final String URL ="https://petstore.swagger.io/v2/user";
+    private static final String PATH="/v2/user/";
+    private static final String URL=URI+PATH;
 
     @Test
     public void createUser(){
         JSONObject requestBody = new JSONObject();
         requestBody.put("id",965457);
-        requestBody.put("username","alenasokolova");
+        requestBody.put("username",USER_NAME);
         requestBody.put("firstName","Alena");
         requestBody.put("lastName","Sokolova");
         requestBody.put("email","test@test.ru");
